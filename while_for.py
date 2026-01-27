@@ -31,5 +31,7 @@ while True:
     elif escolha == 0:
         encerrar()
         break
+    else:
+        print('Opção inválida!')
     
 
