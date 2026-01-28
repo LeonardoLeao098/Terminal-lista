@@ -1,7 +1,21 @@
 numeros = []
 
+def ler_opcao():
+    while True:
+        try:
+            return int(input('Escolha uma opção: '))
+        except: ValueError
+        print('Digite apenas números!')
+
+def ler_numero():
+    while True:
+        try:
+            return int(input('Digite o número a ser adicionado: '))
+        except: ValueError
+        print('Digite apenas números!')
+
 def adicionar():
-    new = int(input('Digite o número a ser adicionado: '))
+    new = ler_numero()
     numeros.append(new)
     print('Número adicionado!')
 
@@ -22,7 +36,7 @@ while True:
     print('2 - Listar números')
     print('0 - Sair\n')
 
-    escolha = int(input('Escolha uma opção: '))
+    escolha = ler_opcao()
 
     if escolha == 1:
         adicionar()
