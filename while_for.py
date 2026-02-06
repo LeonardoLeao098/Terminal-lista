@@ -55,6 +55,13 @@ def estatisticas():
         print(f'Total de números: {len(numeros)}')
         print(f'Soma dos números: {sum(numeros)}')
         print(f'Média dos números: {sum(numeros) / len(numeros):.2f}')
+
+def limpar_lista():
+    if not numeros:
+        print('A lista já está vazia!')
+    else:
+        numeros.clear()
+        print('Lista limpa com sucesso!')
                         
 
 def encerrar():
@@ -66,6 +73,7 @@ while True:
     print('2 - Listar números')
     print('3 - Remover número')
     print('4 - Estatísticas da lista')
+    print('5 - Limpar lista')
     print('0 - Sair\n')
 
     escolha = ler_opcao()
@@ -78,6 +86,8 @@ while True:
         remover()
     elif escolha == 4:
         estatisticas()
+    elif escolha == 5:
+        limpar_lista()
     elif escolha == 0:
         encerrar()
         break
